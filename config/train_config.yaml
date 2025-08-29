@@ -1,0 +1,83 @@
+# Music Classification Training Configuration
+# ==========================================
+
+# Model Configuration
+model:
+  type: "cnn"  # Options: "cnn", "rnn"
+  num_genres: 10
+  num_moods: 4
+  num_keys: 12
+  dropout_rate: 0.3
+
+# Training Configuration
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 10
+  save_every: 5
+
+# Data Configuration
+data:
+  use_spectrograms: true
+  use_features: true
+  max_spectrogram_length: null  # null for variable length
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  num_workers: 4
+
+# Task Weights for Multi-task Learning
+task_weights:
+  genre: 1.0
+  mood: 1.0
+  bpm: 0.1   # Lower weight for regression
+  key: 0.8
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # Options: "auto", "cpu", "cuda"
+  mixed_precision: false
+  pin_memory: true
+
+# Logging Configuration
+logging:
+  log_level: "INFO"
+  tensorboard: true
+  save_history: true
+  plot_results: true
+
+# Class Names (customize based on your dataset)
+class_names:
+  genres:
+    - "rock"
+    - "pop" 
+    - "jazz"
+    - "classical"
+    - "electronic"
+    - "hip-hop"
+    - "country"
+    - "folk"
+    - "blues"
+    - "reggae"
+  
+  moods:
+    - "energetic"
+    - "calm"
+    - "happy"
+    - "melancholic"
+  
+  keys:
+    - "C"
+    - "C#"
+    - "D"
+    - "D#"
+    - "E"
+    - "F"
+    - "F#"
+    - "G"
+    - "G#"
+    - "A"
+    - "A#"
+    - "B"
