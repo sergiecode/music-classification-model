@@ -1,0 +1,58 @@
+training:
+  # Model configuration
+  model_type: "cnn"  # Options: "cnn", "rnn"
+  
+  # Architecture parameters
+  num_genres: 5
+  num_moods: 3
+  num_keys: 12
+  
+  # Training parameters
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  num_epochs: 50
+  
+  # Early stopping
+  early_stopping_patience: 10
+  save_every: 5
+  
+  # Task weights for multi-task learning
+  task_weights:
+    genre: 1.0
+    mood: 1.0
+    bpm: 0.1    # Lower weight for regression
+    key: 0.8
+  
+  # Data configuration
+  data:
+    train_manifest: "data/train_manifest.json"
+    val_manifest: "data/val_manifest.json"
+    use_spectrograms: true
+    use_features: true
+    max_spectrogram_length: 500
+    augment: false
+  
+  # Output directories
+  model_save_dir: "models"
+  log_dir: "logs"
+  
+  # Device configuration
+  device: "auto"  # Options: "auto", "cpu", "cuda"
+
+# Inference configuration
+inference:
+  model_path: "models/best_model.pth"
+  class_mappings_path: "models/class_mappings.json"
+  
+# Data preprocessing integration
+preprocessing:
+  features_expected: 103
+  spectrogram_shape: [128, null]  # Height x Width (width varies)
+  sample_rate: 22050
+  
+# Model export configuration  
+export:
+  api_model_path: "models/api_model.pth"
+  include_class_mappings: true
+  torch_jit_trace: false

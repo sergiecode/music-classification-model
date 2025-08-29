@@ -441,10 +441,6 @@ This project welcomes contributions! Please:
 - Include docstrings for all functions
 - Comment complex algorithms
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Librosa**: Excellent audio processing library
@@ -454,7 +450,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **YouTube Channel**: [Sergie Code](https://youtube.com/@sergiecode)
+- 📸 Instagram: https://www.instagram.com/sergiecode
+
+- 🧑🏼‍💻 LinkedIn: https://www.linkedin.com/in/sergiecode/
+
+- 📽️Youtube: https://www.youtube.com/@SergieCode
+
+- 😺 Github: https://github.com/sergiecode
+
+- 👤 Facebook: https://www.facebook.com/sergiecodeok
+
+- 🎞️ Tiktok: https://www.tiktok.com/@sergiecode
+
+- 🕊️Twitter: https://twitter.com/sergiecode
+
+- 🧵Threads: https://www.threads.net/@sergiecode
+
 - **Issues**: Use GitHub Issues for bug reports and feature requests
 - **Discussions**: GitHub Discussions for questions and ideas
 
